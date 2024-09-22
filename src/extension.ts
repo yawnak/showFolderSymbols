@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 			const parentFolder = path.basename(path.dirname(currentFilePath));
 			
 			// Execute the quickOpen command with the parent folder name as the argument
-			vscode.commands.executeCommand('workbench.action.quickOpen', `#${parentFolder}`);
+			vscode.commands.executeCommand('workbench.action.quickOpen', `#${parentFolder}.`);
 		} else {
 			// If no file is currently open, show a warning message
 			vscode.window.showWarningMessage('No file is currently open.');
